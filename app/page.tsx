@@ -26,10 +26,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  Github,
   Twitter,
-  Linkedin,
-  Facebook,
   BarChart3,
   Car,
   Factory,
@@ -437,20 +434,9 @@ export default function Home() {
                 {[
                   {
                     icon: Twitter,
-                    url: 'https://twitter.com',
+                    url: 'https://x.com/GorbaganaAge',
                     name: 'Twitter',
                   },
-                  {
-                    icon: Facebook,
-                    url: 'https://facebook.com',
-                    name: 'Facebook',
-                  },
-                  {
-                    icon: Linkedin,
-                    url: 'https://linkedin.com',
-                    name: 'LinkedIn',
-                  },
-                  { icon: Github, url: 'https://github.com', name: 'GitHub' },
                 ].map((social) => (
                   <motion.a
                     key={social.name}
@@ -462,13 +448,7 @@ export default function Home() {
                     className="p-2 bg-gray-800/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 rounded-lg transition-all duration-300 group border border-gray-700/50 hover:border-blue-500/50"
                     onClick={(e) => {
                       e.preventDefault();
-                      showModal(
-                        `Connect on ${social.name}`,
-                        `Visit our ${social.name} page to stay updated with the latest AI innovations and company news.`,
-                        'info',
-                        'Visit Page',
-                        () => window.open(social.url, '_blank')
-                      );
+                      window.open(social.url, '_blank');
                     }}
                   >
                     <social.icon className="h-5 w-5 text-gray-400 group-hover:text-blue-400 transition-colors duration-300" />
